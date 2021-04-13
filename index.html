@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="signUpForm" class="bg-container pt-5 pb-5">
+      <div>
+        <img
+          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/profile-avatar-img.png"
+          class="avatar"
+        />
+      </div>
+      <form class="my-form" id="myForm">
+        <div class="mb-3">
+          <label for="firstname" class="label-name">First Name</label>
+          <input type="text" class="form-control" id="firstname" />
+          <p id="firstNameErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="label-name">Last Name</label>
+          <input type="text" class="form-control" id="lastname" />
+          <p id="lastNameErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="label-name">Email ID</label>
+          <input type="text" class="form-control" id="email" />
+          <p id="emailErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-3">
+          <label for="pwd" class="label-name">Password</label>
+          <input type="password" class="form-control" id="pwd" />
+          <p id="pwdErrMsg" class="error-message"></p>
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="button">Sign Up</button>
+          <div class="bottom-section">
+            <p class="existing-user">
+              If already a user? <a id="loginSpan" class="link">Login</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="loginForm" class="bg-container login-form pt-5 pb-2">
+      <div>
+        <img
+          src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/profile-avatar-img.png"
+          class="avatar"
+        />
+      </div>
+      <form class="my-form" id="loginMyForm">
+        <div class="mb-3">
+          <label for="loginEmail" class="label-name">Email ID</label>
+          <input type="text" class="form-control" id="loginEmail" />
+          <p id="loginEmailErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-3">
+          <label for="loginPwd" class="label-name">Password</label>
+          <input type="password" class="form-control" id="loginPwd" />
+          <p id="loginPwdErrMsg" class="error-message"></p>
+        </div>
+        <div class="mt-4">
+          <button type="submit" class="button">Login</button>
+          <div class="bottom-section">
+            <p class="existing-user">
+              If you are a new user? <a id="signupSpan" class="link">Sign Up</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div
+      id="eventDetailsForm"
+      class="events-bg-container events-form pt-5 pb-5"
+    >
+      <h1 class="heading">Add Event Details</h1>
+      <form class="my-form" id="myEventsForm">
+        <div class="mb-3 mt-3">
+          <label for="name" class="label-name">Name</label>
+          <input type="text" class="form-control" id="name" />
+          <p id="nameErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-3">
+          <label for="description" class="label-name">Description</label>
+          <br />
+          <textarea
+            rows="3"
+            cols=""
+            class="form-control"
+            id="description"
+          ></textarea>
+          <p id="descErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-3">
+          <label for="startTime" class="label-name">Start Time</label>
+          <input type="datetime-local" class="form-control" id="startTime" />
+          <p id="startTimeErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-3">
+          <label for="endTime" class="label-name">End Time</label>
+          <input type="datetime-local" class="form-control" id="endTime" />
+          <p id="endTimeErrMsg" class="error-message"></p>
+        </div>
+        <div class="mb-5">
+          <label for="day" class="label-name">Day of the week</label>
+          <select id="day" class="form-control">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </div>
+        <button type="submit" class="button">Submit</button>
+      </form>
+      <button id="logoutBtn" class="back-button mt-3">Logout</button>
+    </div>
+    <div id="eventDetails" class="event-details details pt-5">
+      <h1 class="heading mb-4">Events Data</h1>
+      <div id="eventDetailsList"></div>
+      <button id="backEventBtn" class="back-button mt-3">Back</button>
+    </div>
+  </body>
+</html>
